@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+
+    <!-- Navbar -->
+    <nav>
+        <h2 class="logo">MyPortfolio</h2>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            
+        </ul>
+       
+    </nav>
+
+    <!-- Home -->
+    <section id="home" class="home">
+        <h1>Hello, I'm <span>Bhanu Prasad</span></h1>
+        <p>Fresher | Web Developer | Data Analyst</p>
+        <div class="resume-actions">
+    <a href="Bhanu2003.pdf" target="_blank" class="resume-btn secondary">
+        👁 View Resume
+    </a>
+    <a href="Bhanu2003.pdf" download class="resume-btn">
+        ⬇ Download Resume
+    </a>
+</div>
+
+       
+    </section>
+
+    <!-- About -->
+    <section id="about">
+        <h2>About Me</h2>
+       <p class="about-text-alt">
+    I am a motivated fresher with a strong foundation in web development,
+    data analytics, and basic machine learning concepts.
+    I have built academic projects such as an ML-based contact tracing system
+    and a blockchain-based certificate verification system, along with
+    frontend applications like an interactive quiz game and a Rock–Paper–Scissors game.
+    I enjoy solving problems using JavaScript and Python, working with data,
+    and continuously improving my technical skills by building real-world projects.
+</p>
+    </section>
+    
+
+
+
+    <!-- Skills -->
+<section id="skills">
+    <h2>My Skills</h2>
+
+    <div class="skills-wrapper">
+
+        <div class="skill-group">
+            <h3>Frontend Technologies</h3>
+            <div class="skills-grid">
+                <div class="skill">HTML</div>
+                <div class="skill">CSS</div>
+                <div class="skill">JavaScript</div>
+            </div>
+        </div>
+
+        <div class="skill-group">
+            <h3>Data Analytics</h3>
+            <div class="skills-grid">
+                <div class="skill">Python</div>
+                <div class="skill">MySQL</div>
+                <div class="skill">MS Excel</div>
+                <div class="skill">Power BI</div>
+                <div class="skill">NumPy</div>
+                <div class="skill">Pandas</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+
+    <!-- ================= Academic Projects ================= -->
+    <h3 class="project-section-title">Academic Projects</h3>
+
+    <div class="projects-container">
+
+        <div class="project">
+            <h3>ML-Based Contact Tracing System</h3>
+            <p class="project-type">Final Year Academic Project</p>
+
+            <p>
+                Developed a machine learning-based system to automate contact tracing
+                and identify high-risk individuals during infectious disease outbreaks.
+            </p>
+
+            <p><strong>Technologies:</strong>
+                Python, Pandas, NumPy, Scikit-learn, Streamlit, Matplotlib, Seaborn
+            </p>
+
+            <p><strong>My Role:</strong>
+                Implemented DBSCAN clustering, data analysis,
+                dashboards, and alert automation.
+            </p>
+
+            <p><strong>Outcome:</strong>
+                Improved speed and accuracy of contact identification.
+            </p>
+        </div>
+
+        <div class="project">
+            <h3>Blockchain-Based Certificate Verification System</h3>
+            <p class="project-type">Major Academic Project</p>
+
+            <p>
+                Designed a decentralized system for secure academic certificate
+                issuance and verification using blockchain.
+            </p>
+
+            <p><strong>Technologies:</strong>
+                Python, Flask, Blockchain, QR Code, Ethereum
+            </p>
+
+            <p><strong>My Role:</strong>
+                Backend logic, blockchain hashing,
+                QR-based verification.
+            </p>
+
+            <p><strong>Outcome:</strong>
+                Prevented certificate forgery with tamper-proof validation.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- ================= Frontend Projects ================= -->
+    <h3 class="project-section-title">Frontend / Web Projects</h3>
+
+    <div class="projects-container">
+
+        <div class="project">
+            <h3>Interactive Quiz Game</h3>
+            <p class="project-type">Frontend Practice Project</p>
+
+            <p class="project-desc">
+                A dynamic quiz application with timed questions,
+                progress bar, scoring system, and result feedback.
+            </p>
+
+            <p class="project-meta">
+                <strong>Technologies:</strong> HTML, CSS, JavaScript
+            </p>
+
+            <p class="project-meta">
+                <strong>Key Features:</strong>
+                Timer, score tracking, progress bar, restart option
+            </p>
+
+            <p class="project-outcome">
+                Strengthened JavaScript logic, DOM manipulation,
+                and UI interaction skills.
+            </p>
+
+        <!-- <a href="https://github.com/yourusername/quiz-game" target="_blank">
+                GitHub Repository
+            </a>-->
+        </div>
+
+        <div class="project">
+            <h3>Rock Paper Scissors Game</h3>
+            <p class="project-type">Frontend Practice Project</p>
+
+            <p class="project-desc">
+                Interactive Rock–Paper–Scissors game with
+                real-time score tracking and game-over logic.
+            </p>
+
+            <p class="project-meta">
+                <strong>Technologies:</strong> HTML, CSS, JavaScript
+            </p>
+
+            <p class="project-meta">
+                <strong>Key Features:</strong>
+                User vs Computer logic, score limit,
+                win/lose messages, reset functionality
+            </p>
+
+            <p class="project-outcome">
+                Improved conditional logic, event handling,
+                and game state management.
+            </p>
+
+          <!--  <a href="https://github.com/yourusername/rock-paper-scissors" target="_blank">
+                GitHub Repository
+            </a>-->
+        </div>
+
+    </div>
+</section>
+
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+       <form id="contact-form">
+    <input type="text" name="user_name" placeholder="Your Name" required>
+    <input type="email" name="user_email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send</button>
+</form>
+
+<p id="status"></p>
+
+    </section>
+
+    <footer>
+        <p>© 2026 Your Name | All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

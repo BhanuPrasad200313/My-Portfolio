@@ -1,0 +1,538 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f4f4;
+    color: #333;
+     padding-top: 70px;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 40px;
+    background: #222;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+     box-shadow: 0 3px 9px rgba(0,0,0,0.29);
+
+
+
+
+}
+/* Dark mode toggle button */
+.theme-btn {
+    background: transparent;
+    border: 2px solid #00adb5;
+    color: #00adb5;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.theme-btn:hover {
+    background: #00adb5;
+    color: #222;
+}
+
+/* ===============================
+   About Me – Alternate Style
+================================ */
+
+.about-text-alt {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 28px 0;
+    font-size: 18px;
+    line-height: 1.75;
+    color: #333;
+    text-align: center;
+    border-top: 2px solid #00adb5;
+    border-bottom: 2px solid #00adb5;
+    position: relative;
+    font-weight: 400;
+}
+
+/* Highlight key tech feel */
+.about-text-alt::first-letter {
+    font-size: 42px;
+    font-weight: 700;
+    color: #00adb5;
+    float: left;
+    margin-right: 10px;
+    line-height: 1;
+}
+
+/* Subtle emphasis words */
+.about-text-alt strong {
+    color: #00adb5;
+    font-weight: 600;
+}
+
+/* Smooth entry animation */
+.about-text-alt {
+    animation: fadeSlide 0.9s ease forwards;
+}
+
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .projects-container {
+        max-width: 1400px;
+    }
+
+    .project {
+        max-width: 460px;
+    }
+}
+
+
+/* Mobile optimization */
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+    section {
+        padding: 50px 30px;
+    }
+
+    .skills-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project {
+        max-width: 320px;
+    }
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+
+    section {
+        padding: 60px 40px;
+    }
+
+    .projects-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .project {
+        max-width: 340px;
+    }
+}
+
+
+
+
+@media (max-width: 768px) {
+    .skills-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+
+    nav {
+        flex-direction: column;
+        padding: 14px 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    section {
+        padding: 40px 20px;
+    }
+
+    .home h1 {
+        font-size: 22px;
+    }
+
+    .about-text-alt {
+        font-size: 15px;
+        text-align: left;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .project {
+        max-width: 100%;
+    }
+    body{
+        padding-top: 95px;
+    }
+}
+
+
+/* Skills Section */
+.skills-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.skill-group {
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+}
+
+.skill-group h3 {
+    margin-bottom: 20px;
+    color: #00adb5;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+}
+
+.skill {
+     padding: 14px 10px;
+    background: #f4f4f4;
+    border-radius: 6px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    white-space: nowrap; 
+}
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 18px;
+    justify-items: center;
+}
+/*
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+    
+
+
+
+.project {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+*/
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+
+    max-width: 1300px;       
+    margin: 30px auto;      
+    justify-items: center;  
+}
+
+.project {
+    width: 100%;
+    max-width: 420px;       
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+.project h4 {
+    color: #00adb5;
+    margin-bottom: 10px;
+}
+
+.project a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #00adb5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-heading {
+    margin-top: 40px;
+    color: #393e46;
+}
+/* ===============================
+   Project Text Styling
+================================ */
+
+/* General paragraph text */
+.project p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Labels like Technologies, My Role, Outcome */
+.project p strong {
+      background: #f5fefe;
+    padding: 3px 8px;
+    border-radius: 5px;
+    color: #006d72;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(0, 173, 181, 0.12);
+}
+
+/* Make key sections visually separated */
+.project p:not(:first-of-type) {
+    padding-left: 8px;
+    border-left: 3px solid #00adb5;
+}
+
+/* Academic project type text */
+.project-type {
+    background: #e6fbfd;
+    color: #006d72;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(0, 173, 181, 0.15);
+    display: inline-block;
+    margin-bottom: 14px;
+}
+
+/* Highlight outcomes */
+.project p:last-of-type {
+    background: #f7fefe;
+    padding: 10px;
+    border-radius: 6px;
+    border-left: 4px solid #00adb5;
+}
+
+/* Links inside project */
+.project a {
+    margin-top: 14px;
+    display: inline-block;
+    font-size: 14px;
+}
+.project h3{
+    text-align: center;
+    background: #f0fbfc;           /* very light teal */
+    padding: 10px 14px;
+    border-radius: 8px;
+    color: #007c82;
+    font-size: 19px;
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(0, 173, 181, 0.15);
+    margin-bottom: 12px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.project:hover h3 {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 173, 181, 0.25);
+}
+/* Quiz / Project Text Styling */
+.project-desc {
+    color: #444;
+    font-size: 14.5px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.project-meta {
+    background: #f8fefe;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    border-left: 4px solid #00adb5;
+}
+
+.project-outcome {
+    background: #f0fbfc;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-style: italic;
+    color: #006d72;
+    border-left: 4px solid #00adb5;
+}
+/* Project Section Titles */
+.project-section-title {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #393e46;
+    text-align: center;
+    position: relative;
+}
+
+.project-section-title::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #00adb5;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+
+
+nav .logo {
+    color: #00adb5;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Home */
+.home {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #00adb5, #393e46);
+    color: white;
+    text-align: center;
+}
+.home p{
+    font-size: medium;
+    font-weight: bold;
+    box-shadow: #222;
+}
+
+.home span {
+    color: yellow;
+}
+
+.home button {
+    margin-top: 20px;
+    padding: 10px 25px;
+    border: none;
+    background: yellow;
+    cursor: pointer;
+}
+
+/* Sections */
+section {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+
+
+
+/* Contact */
+form {
+    max-width: 400px;
+    margin: auto;
+}
+
+
+form input,
+form textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px;
+    background: #00adb5;
+    border: none;
+    color: white;
+    width: 100%;
+    border-radius: 12px;
+    font-size: larger;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+.resume-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.resume-btn {
+    padding: 12px 26px;
+    background: yellow;
+    color: #222;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.resume-btn:hover {
+    transform: translateY(-2px);
+}
+
+.resume-btn.secondary {
+    background: transparent;
+    color: yellow;
+    border: 2px solid yellow;
+}
+
+.resume-btn.secondary:hover {
+    background: yellow;
+    color: #222;
+}
